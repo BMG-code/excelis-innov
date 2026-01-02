@@ -1,0 +1,130 @@
+/* === BASE === */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* === HEADER ET NAVIGATION === */
+header, footer {
+    background: #0a3d62; /* bleu foncé */
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #27ae60; /* vert */
+}
+
+/* === HERO === */
+.hero {
+    background: linear-gradient(to right, #0a3d62, #27ae60); /* bleu foncé → vert */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: #0a3d62;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #27ae60;
+    color: white;
+}
+
+/* === SECTIONS === */
+.expertise, .apropos, .services, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* === CARTES === */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #eaf2f8; /* bleu très clair */
+    color: #0a3d62;
+    padding: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* === SERVICES === */
+.services ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.services li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.services li::before {
+    content: "✔";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
